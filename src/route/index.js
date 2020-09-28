@@ -12,7 +12,36 @@ const router = new VueRouter({
         {
             path:'/video',
             name:'Video',
-            component:()=>import('../view/video/Video')
+            component: () => import('../view/video/Video'),
+            redirect: '/video/recommend',
+            children: [
+                {
+                    path: 'recommend',
+                    name:'Recommend',
+                    component:()=>import('../view/video/recommend/index')
+                },
+                {
+                    path: 'music',
+                    name:' Music',
+                    component: () => import('../view/video/music/index'),
+                },
+                {
+                    path: 'mv',
+                    name:'Mv',
+                    component:()=>import('../view/video/mv/index')
+                },
+                {
+                    path: 'showtime',
+                    name:'Showtime',
+                    component:()=>import('../view/video/showtime/index')
+                },
+                {
+                    path: 'erciyuan',
+                    name:'Erciyuan',
+                    component:()=>import('../view/video/erciyuan/index')
+                },
+            ]
+            
         },
         {
             path:'/mine',
@@ -33,6 +62,11 @@ const router = new VueRouter({
             path:'/play',
             name:'Play',
             component:()=>import('../components/Play')
+        },
+        {
+            path: '/mvplay',
+            name:'Mvplay',
+            component:()=>import('../view/mvplay/mvplay')
         }
     ],
     linkActiveClass:'active'
