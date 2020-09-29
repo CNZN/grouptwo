@@ -58,9 +58,44 @@ const router = new VueRouter({
             component: () => import('../view/friend/Friend')
         },
         {
+<<<<<<< HEAD
             path: '/account',
             name: 'Account',
             component: () => import('../view/account/Account')
+=======
+            path:'/video',
+            name:'Video',
+            component: () => import('../view/video/Video'),
+            redirect: '/video/recommend',
+            children: [
+                {
+                    path: 'recommend',
+                    name:'Recommend',
+                    component:()=>import('../view/video/recommend/index')
+                },
+                {
+                    path: 'music',
+                    name:' Music',
+                    component: () => import('../view/video/music/index'),
+                },
+                {
+                    path: 'mv',
+                    name:'Mv',
+                    component:()=>import('../view/video/mv/index')
+                },
+                {
+                    path: 'showtime',
+                    name:'Showtime',
+                    component:()=>import('../view/video/showtime/index')
+                },
+                {
+                    path: 'erciyuan',
+                    name:'Erciyuan',
+                    component:()=>import('../view/video/erciyuan/index')
+                },
+            ]
+            
+>>>>>>> wdy
         },
         {
             path: '/play',
@@ -78,9 +113,20 @@ const router = new VueRouter({
             component: () => import('../view/top/Top')
         },
         {
+<<<<<<< HEAD
             path: '/diantaifenlei',
             name: 'Diantaifenlei',
             component: () => import('../view/diantaifenlei/Diantaifenlei')
+=======
+            path:'/play',
+            name:'Play',
+            component:()=>import('../components/Play')
+        },
+        {
+            path: '/mvplay',
+            name:'Mvplay',
+            component: () => import('../view/mvplay/mvplay'),
+>>>>>>> wdy
         }
     ],
     linkActiveClass: 'active'
