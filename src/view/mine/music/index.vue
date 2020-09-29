@@ -51,13 +51,16 @@
 </template>
 
 <script>
-    import axios from 'axios'
+    // import axios from 'axios'
     export default {
 
         components: {},
         data() {
             return {
-                list: []
+                list: [{
+                    song: '情人',
+                    singer: '刀郎'
+                }]
             };
         },
         props: {
@@ -76,11 +79,11 @@
                 history.go(-1);
             },
             getmusic() {
-                axios.get('/api/music').then(res => {
+                // axios.get('/api/music').then(res => {
 
-                    this.list = res.data.list
-                    console.log(this.list)
-                })
+                //     this.list = res.data.list
+                //     console.log(this.list)
+                // })
             }
         },
         //监听属性 类似于data概念
@@ -103,6 +106,7 @@
     .music {
         background: #2E3432;
         overflow: hidden;
+
         .p {
             overflow: hidden;
             position: fixed;
@@ -168,12 +172,14 @@
         .play {
             background: #ffffff !important;
             color: #000;
+
             .list {
                 height: 40px;
                 display: flex;
                 // padding-left: 16px;
                 padding: 6px 0 6px 16px;
                 border-bottom: 1px solid #ebedf0;
+
                 .left {
                     flex: 1;
                     text-align: left;

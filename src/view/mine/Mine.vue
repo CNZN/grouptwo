@@ -16,7 +16,6 @@
           </van-collapse-item>
         </van-collapse>
       </div>
-      
     </div>
   </div>
 
@@ -31,7 +30,7 @@
     },
     data() {
       return {
-        activeNames: ['1']
+        activeNames: ['1'],
       }
     },
     methods: {

@@ -1,6 +1,7 @@
 <template>
   <div class="video">
     <Header3></Header3>
+    <router-view></router-view>
   </div>
 </template>
 

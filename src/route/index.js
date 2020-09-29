@@ -60,19 +60,26 @@ const router = new VueRouter({
             path: '/mine',
             name: 'Mine',
             component: () =>
-                import ('../view/mine/Mine'),
-            children: [{
-                path: '/mine/music',
-                name: 'music',
-                component: () =>
-                    import ('../view/mine/music/index.vue')
-            }]
+                import ('../view/mine/Mine')
         },
         {
             path: '/friend',
             name: 'Friend',
             component: () =>
-                import ('../view/friend/Friend')
+                // import ('../view/friend/Friend')
+                import ('../view/friend/Friend'),
+            redirect: '/friend/dynamic',
+            children: [{
+                path: 'dynamic',
+                name: 'Dynamic',
+                component: () =>
+                    import ("../view/friend/Dynamic/dynamic.vue")
+            }, {
+                path: 'nearby',
+                name: 'Nearby',
+                component: () =>
+                    import ("../view/friend/Nearby/nearby.vue")
+            }]
         },
         {
             path: '/account',
@@ -152,6 +159,27 @@ const router = new VueRouter({
             name: 'Mvplay',
             component: () =>
                 import ('../view/mvplay/mvplay'),
+        }, {
+            path: '/fabu',
+            name: 'Fabu',
+            component: () =>
+                import ('../view/friend/Dynamic/Fabu/fabu.vue')
+        }, {
+            path: '/shipin',
+            name: 'Shipin',
+            component: () =>
+                import ('../view/friend/Dynamic/Shipin/shipin.vue')
+        }, {
+            path: '/personal',
+            name: 'Personal',
+            component: () =>
+                import ('../view/friend/Dynamic/Personal/personal.vue')
+        },
+        {
+            path: '/mine/music',
+            name: 'music',
+            component: () =>
+                import ('../view/mine/music/index.vue')
         }
     ],
     linkActiveClass: 'active'
