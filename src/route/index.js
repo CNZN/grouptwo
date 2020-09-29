@@ -58,11 +58,10 @@ const router = new VueRouter({
             component: () => import('../view/friend/Friend')
         },
         {
-<<<<<<< HEAD
             path: '/account',
             name: 'Account',
             component: () => import('../view/account/Account')
-=======
+        },{
             path:'/video',
             name:'Video',
             component: () => import('../view/video/Video'),
@@ -95,7 +94,6 @@ const router = new VueRouter({
                 },
             ]
             
->>>>>>> wdy
         },
         {
             path: '/play',
@@ -113,11 +111,10 @@ const router = new VueRouter({
             component: () => import('../view/top/Top')
         },
         {
-<<<<<<< HEAD
             path: '/diantaifenlei',
             name: 'Diantaifenlei',
             component: () => import('../view/diantaifenlei/Diantaifenlei')
-=======
+        },{
             path:'/play',
             name:'Play',
             component:()=>import('../components/Play')
@@ -126,7 +123,6 @@ const router = new VueRouter({
             path: '/mvplay',
             name:'Mvplay',
             component: () => import('../view/mvplay/mvplay'),
->>>>>>> wdy
         }
     ],
     linkActiveClass: 'active'
