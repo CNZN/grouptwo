@@ -66,7 +66,7 @@ const router = new VueRouter({
         {
             path: '/mvplay',
             name:'Mvplay',
-            component:()=>import('../view/mvplay/mvplay')
+            component: () => import('../view/mvplay/mvplay'),
         }
     ],
     linkActiveClass:'active'
