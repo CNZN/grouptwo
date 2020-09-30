@@ -50,12 +50,6 @@ const router = new VueRouter({
             ]
         }]
     },
-    // {
-    //     path: '/video',
-    //     name: 'Video',
-    //     component: () => import('../view/video/Video'),
-    //     redirect:'/video/'
-    // },
     {
         path: '/mine',
         name: 'Mine',
@@ -126,12 +120,6 @@ const router = new VueRouter({
         ]
 
     },
-    // {
-    //     path: '/play',
-    //     name: 'Play',
-    //     component: () =>
-    //         import('../components/Play')
-    // },
     {
         path: '/songlist',
         name: 'Songlist',

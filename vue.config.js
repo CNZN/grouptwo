@@ -13,7 +13,7 @@ module.exports = {
         port: 8989, // 开发服务器运行端口号
         proxy: {
             '/api': {
-                target: 'http://www.exaple.com', // 代理接口地址
+                target: 'http://localhost:7777', // 代理接口地址
                 secure: false,  // 如果是https接口，需要配置这个参数
                 changeOrigin: true, // 是否跨域
                 pathRewrite: {
