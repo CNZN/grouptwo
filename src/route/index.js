@@ -81,7 +81,7 @@ const router = new VueRouter({
         component: () =>
             import('../view/account/Account')
     },
-     {
+    {
         path: '/video',
         name: 'Video',
         component: () =>
@@ -141,7 +141,8 @@ const router = new VueRouter({
         path: '/play',
         name: 'Play',
         component: () =>
-            import('../components/Play')
+            import('../components/Play'),
+        // meta: { noCache: true},
     },
     {
         path: '/mvplay',

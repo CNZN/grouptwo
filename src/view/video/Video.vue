@@ -1,6 +1,6 @@
 <template>
   <div class="video">
-    <Header1></Header1>
+    <Header1 class="h"></Header1>
      <div class="content">
       <ul class="conNav">
         <li><router-link tag="span" to="/video/recommend">推荐</router-link></li>
@@ -25,6 +25,8 @@ export default {
 </script>
 
 <style lang='scss' scoped>
+
+.h{z-index: 1000;}
 .header1{
   position: fixed;
   top:0%;
@@ -38,7 +40,7 @@ export default {
         background-color: #e4463b;
         position: fixed;
         top:40px;
-        z-index: 10;
+        z-index: 1;
       }
       .conNav li{
         flex:0.2;

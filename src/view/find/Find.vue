@@ -24,7 +24,7 @@
 <style scoped lang="scss">
   .h{
     position: fixed;
-    z-index: 1;
+    z-index: 10;
     width: 100%;
   }
   .con{

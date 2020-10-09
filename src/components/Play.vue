@@ -14,6 +14,7 @@
         <!-- autoplay:自动播放,controls显示控件 ;@play="play"是自定义方法-->
         <audio
           :src="songUrl"
+          loop="true"
           autoplay
           controls
           @play="play"
@@ -55,6 +56,14 @@ export default {
   },
   components: {
     Back,
+  },
+  computed: {
+    // id(){
+    //   return this.$store.state.id;
+    // },
+    // albumId(){
+    //   return this.$store.state.albumId;
+    // }
   },
   created() {
     this.id = this.$route.query.mid;
