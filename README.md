@@ -1,5 +1,7 @@
 # grouptwo
 
+好友们的共同项目～纪念与留存
+
 ## Project setup
 ```
 npm install
